@@ -1,0 +1,51 @@
+/değişkenlerimizi tanımlıyoruz.
+
+int birinciSayi,ikinciSayi;
+char operatorler;
+double sonuc;
+ 
+/shwthsln yazdırma işlemi yapar.
+/readthsln okuma işlemi yapar.
+ 
+shwthsln "\n\tMenu";
+shwthsln "\nTOPLAMA İÇİN + TUŞUNA BASIN";
+shwthsln "ÇIKARMA İÇİN - TUŞUNA BASIN";
+shwthsln "ÇARPMA İÇİN * TUŞUNA BASIN";
+shwthsln "BÖLME İÇİN + TUŞUNA BASIN";
+ 
+shwthsln "\n\n Birinci Sayıyı Girin :";
+birinciSayi= Convert.ToInt32(readthsln());
+ 
+shwthsln " İkinci Sayıyı Girin :";
+ikinciSayi = Convert.ToInt32(readthsln());
+ 
+shwthsln "\nİşlem yapmak için bir operatör seçiniz:\t";
+operatorler= Convert.ToChar(readthsln());
+ 
+if (operatorler == '+')
+{
+sonuc = birinciSayi + ikinciSayi;
+shwthsln("\n{0} + {1} = {2}", birinciSayi , ikinciSayi, sonuc);
+}
+elif (operatorler == '-')
+{
+sonuc = birinciSayi - ikinciSayi;
+shwthsln("\n{0} - {1} = {2}", birinciSayi ,ikinciSayi, sonuc);
+}
+elif (operatorler == '*')
+{
+sonuc = birinciSayi * ikinciSayi;
+shwthsln("\n{0} x {1} = {2}", birinciSayi ,ikinciSayi, sonuc);
+}
+elif (operatorler == '/')
+{
+sonuc =(double) birinciSayi/ ikinciSayi;
+shwthsln("\n{0} / {1} = {2}", birinciSayi ,ikinciSayi, sonuc);
+}
+else
+{
+shwthsln("Yanlış bir operatör girdiniz.");
+}
+ 
+ 
+readthsln();
